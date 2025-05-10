@@ -92,17 +92,16 @@ def add_word_freq(browser: Browser, lang_code: str, *_) -> None:
     config = mw.addonManager.getConfig(__name__)
     nids = browser.table.get_selected_note_ids()
     for nid in nids:
-        input_field = config["input_field"]
-        output_field = config["output_field"]
         note = mw.col.get_note(nid)
-        front = note[input_field]
-        freq = zipf_frequency(front, lang_code)
-        output = (
-            config["output_upper_bound"] - freq
-            if config["output_is_inverted"] is True
-            else freq
-        )
-        note[output_field] = "{:.2f}".format(output)
+        for input_field, output_field in config.get("fields", {}).items():
+            input_ = note[input_field]
+            freq = zipf_frequency(input_, lang_code)
+            output = (
+                config["output_upper_bound"] - freq
+                if config["output_is_inverted"] is True
+                else freq
+            )
+            note[output_field] = "{:.2f}".format(output)
         mw.col.update_note(note)
 
     mw.progress.finish()
