@@ -2,6 +2,19 @@
 
 
 
+## v0.3.0 (2025-05-10)
+
+### Feature
+
+* feat: support for multiple field pairs
+
+Refs #7 ([`d52d614`](https://github.com/kamoo1/anki-word-freq/commit/d52d61437306efc697a8a0331b7ed200e7250625))
+
+### Unknown
+
+* add arm64 to platforms ([`4dc4d64`](https://github.com/kamoo1/anki-word-freq/commit/4dc4d6496b00ab35a2d0e4fccaf96698d176d1a4))
+
+
 ## v0.2.0 (2024-11-04)
 
 ### Feature
