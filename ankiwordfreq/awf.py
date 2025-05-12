@@ -94,6 +94,10 @@ def add_word_freq(browser: Browser, lang_code: str, *_) -> None:
     for nid in nids:
         note = mw.col.get_note(nid)
         for input_field, output_field in config.get("fields", {}).items():
+            if input_field not in note:
+                continue
+            if output_field in note:
+                continue
             input_ = note[input_field]
             freq = zipf_frequency(input_, lang_code)
             output = (
