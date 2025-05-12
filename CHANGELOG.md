@@ -2,6 +2,17 @@
 
 
 
+## v0.3.1 (2025-05-12)
+
+### Documentation
+
+* docs: update readme ([`a6cd877`](https://github.com/kamoo1/anki-word-freq/commit/a6cd87751296582487a840b2c6728996c025ff3e))
+
+### Fix
+
+* fix: skip if field not found ([`ef78580`](https://github.com/kamoo1/anki-word-freq/commit/ef78580aff8690dd60d1eba5771010a2b3fbea96))
+
+
 ## v0.3.0 (2025-05-10)
 
 ### Feature
